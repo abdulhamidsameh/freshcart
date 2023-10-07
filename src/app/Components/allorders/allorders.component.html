@@ -1,0 +1,19 @@
+<section class="mt-4">
+  <div class="row g-4">
+    <div class="product col-md-4" *ngFor="let order of allOrdersData">
+      <div>
+        <div>
+          <div class="desc">
+            <h6 class="font-sm text-main">
+              Total Order Price:
+              {{ order.totalOrderPrice | currency : "EGP" }}
+            </h6>
+
+            <p>Order Tax Price:{{ order.taxPrice | currency : "EGP" }}</p>
+            <p>Order Payment Method:{{ order.paymentMethodType }}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

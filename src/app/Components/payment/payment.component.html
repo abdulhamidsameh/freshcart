@@ -1,0 +1,24 @@
+<form
+  class="w-75 mx-auto mt-4"
+  [formGroup]="checkForm"
+  (ngSubmit)="handleForm()"
+>
+  <div class="form-item">
+    <label for="details">Details:</label>
+    <input
+      class="form-control"
+      id="details"
+      formControlName="details"
+      type="text"
+    />
+  </div>
+  <div class="form-item">
+    <label for="city">City:</label>
+    <input type="text" class="form-control" id="city" formControlName="city" />
+  </div>
+  <div class="form-item">
+    <label for="phone">Phone:</label>
+    <input type="tel" id="phone" class="form-control" formControlName="phone" />
+  </div>
+  <button class="main-btn">CheckOut</button>
+</form>

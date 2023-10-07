@@ -1,0 +1,20 @@
+<section class="mt-4">
+  <h2>All Categories</h2>
+  <div class="row g-4">
+    <div class="product col-md-3" *ngFor="let category of categoryData">
+      <div>
+        <div role="button" [routerLink]="['/categoryDetails', category._id]">
+          <img
+            [src]="category.image"
+            class="w-100 object-fit-fill"
+            height="300px"
+            alt=""
+          />
+          <div class="desc p-2 mt-3 text-center">
+            <h6 class="text-main">{{ category.name }}</h6>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

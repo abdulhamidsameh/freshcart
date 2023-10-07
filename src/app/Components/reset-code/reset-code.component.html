@@ -1,0 +1,16 @@
+<form
+  class="w-75 mx-auto mt-4"
+  [formGroup]="checkForm"
+  (ngSubmit)="handleForm()"
+>
+  <div class="form-item">
+    <label for="Code">Code:</label>
+    <input
+      class="form-control"
+      id="Code"
+      formControlName="resetCode"
+      type="text"
+    />
+  </div>
+  <button class="main-btn">Send</button>
+</form>

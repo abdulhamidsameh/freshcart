@@ -1,0 +1,31 @@
+<section class="mt-4">
+  <div class="row g-4 align-items-center">
+    <div class="col-md-3">
+      <div>
+        <owl-carousel-o [options]="productSlider">
+          <ng-container *ngFor="let path of productDetails.images">
+            <ng-template carouselSlide>
+              <img [src]="path" class="w-100 object-fit-fill" height="320" />
+            </ng-template>
+          </ng-container>
+        </owl-carousel-o>
+      </div>
+    </div>
+    <div class="col-md-9">
+      <div>
+        <h5>{{ productDetails.title }}</h5>
+        <p>{{ productDetails.description }}</p>
+        <span class="d-block">{{ productDetails.category.name }}</span>
+        <span class="d-block">{{
+          productDetails.price | currency : "EGP"
+        }}</span>
+        <button
+          (click)="addProduct(productDetails._id)"
+          class="main-btn d-block w-100"
+        >
+          +Add to Cart
+        </button>
+      </div>
+    </div>
+  </div>
+</section>
